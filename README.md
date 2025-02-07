@@ -18,7 +18,6 @@ Having a personal portfolio website is a must for a developer. It is a place whe
 - **Projects** - This website has a projects section where you can showcase your projects.
 - **Contact** - This website has a contact section where people can contact you.
 - **Customize Email Template** - This website has a customize email template using React Email.
-- **Spotify API** - This website has a Spotify API integration where you can show what you are listening to.
 - **Node Mailer** - This website has a Node Mailer integration where you can send an email to yourself.
 - **Shadcn/ui** - This website has a Shadcn/ui integration where you can use the Shadcn/ui component.
 
@@ -36,25 +35,6 @@ Setup your environment variables in the .env.local file. You can see the example
 ```
 NEXT_PUBLIC_EMAIL="Your Email Gmail"
 NEXT_PUBLIC_PASSWORD="Your Password Generate App Gmail"
-NEXT_PUBLIC_CLIENT_ID_SPOTIFY="Your Client ID Spotify"
-NEXT_PUBLIC_CLIENT_SECRET_SPOTIFY="Your Client Secret Spotify"
-NEXT_PUBLIC_REFRESH_TOKEN_SPOTIFY="Your Refresh Token Spotify"
-```
-
-#### how to get key Spotify:
-
-```
-1. Go to https://developer.spotify.com/dashboard/applications
-2. Click Create an app
-3. Fill in the application name and description
-4. Click Edit Settings
-5. Add http://localhost:3000/callback to Redirect URIs
-6. Click Save
-7. Click Show Client Secret
-8. Copy Client ID and Client Secret
-9. Click Get Token
-10. Click Request Token
-11. Copy Refresh Token
 ```
 
 #### how to get key Gmail:
@@ -112,7 +92,6 @@ npm run email dev
 - [Framer Motion](https://www.framer.com/motion/)
 - [Next Themes](https://github.com/pacocoursey/next-themes)
 - [React Email](https://react.email/)
-- [Spotify API](https://developer.spotify.com/documentation/web-api/)
 - [Node Mailer](https://nodemailer.com/)
 - [Vercel](https://vercel.com/)
 - [Shadcn/ui](https://ui.shadcn.com/)
