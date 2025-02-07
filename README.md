@@ -1,4 +1,4 @@
-# Personal Portfolio Website aafrzl.my.id
+# Personal Profile dickydns
 
 ## Description
 
@@ -42,6 +42,7 @@ NEXT_PUBLIC_REFRESH_TOKEN_SPOTIFY="Your Refresh Token Spotify"
 ```
 
 #### how to get key Spotify:
+
 ```
 1. Go to https://developer.spotify.com/dashboard/applications
 2. Click Create an app
@@ -71,13 +72,13 @@ NEXT_PUBLIC_REFRESH_TOKEN_SPOTIFY="Your Refresh Token Spotify"
 1. Clone the repository
 
 ```sh
-git clone https://github.com/aafrzl/v2.portfolio-aafrzl.my.id.git
+git clone https://github.com/dicky-dns/personalprofile.git
 ```
 
 2. Navigate to the repository directory
 
 ```sh
-cd v2.portfolio-aafrzl.my.id
+cd personalprofile
 ```
 
 3. Install the dependencies

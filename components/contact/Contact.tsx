@@ -18,42 +18,27 @@ export default function Contact() {
           <ContactTitle title="Contact" />
           <ContactForm />
           <div className="flex w-full justify-between py-12">
-            <div>
-              <p className="mb-4 text-xl font-semibold text-zinc-200 dark:text-zinc-800">
-                Github
-              </p>
-              <Link
-                href="https://github.com/aafrzl"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Github Link"
-              >
-                <MagneticEffect>
-                  <GithubIcon className="h-8 w-8 text-zinc-100 dark:text-zinc-800" />
-                </MagneticEffect>
-              </Link>
-            </div>
             <div className="flex flex-col items-end">
               <p className="mb-4 text-xl font-semibold text-zinc-200 dark:text-zinc-800">
                 Links
               </p>
               <div className="flex items-center gap-x-2">
                 <ContactLink
-                  href="https://instagram.com/aafrzl_"
+                  href="https://instagram.com/dickydns"
                   label="Instagram"
                   icon={
                     <InstagramIcon className="text-zinc-200 dark:text-zinc-800" />
                   }
                 />
                 <ContactLink
-                  href="mailto:afrizal.mufriz25@gmail.com"
+                  href="mailto:dickydns1@gmail.com"
                   label="Email"
                   icon={
                     <MailIcon className="text-zinc-200 dark:text-zinc-800" />
                   }
                 />
                 <ContactLink
-                  href="https://www.linkedin.com/in/afrizal-mufriz-fouji-8a930111b/"
+                  href="https://www.linkedin.com/in/dickydns/"
                   label="LinkedIn"
                   icon={
                     <LinkedinIcon className="text-zinc-200 dark:text-zinc-800" />
