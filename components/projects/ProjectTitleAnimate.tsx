@@ -3,6 +3,7 @@
 import { useAnimation, useInView, motion } from "framer-motion"
 import { Sparkles } from "lucide-react"
 import { useEffect, useRef } from "react"
+import GlobeAnimate from "./GlobeAnimate"
 
 export default function ProjectTitleAnimate() {
   const ref = useRef(null)
@@ -43,7 +44,7 @@ export default function ProjectTitleAnimate() {
       <h2 className="text-4xl font-bold md:text-5xl lg:text-7xl">
         Recent Projects
       </h2>
-      <Sparkles className="h-9 w-9 md:h-11 md:w-11 lg:h-16 lg:w-16" />
+      <GlobeAnimate/>
     </motion.div>
   )
 }

@@ -23,7 +23,7 @@ export default function HeroText() {
               ease: [0.2, 0.65, 0.3, 0.9],
             },
           }}
-          className="absolute bottom-[calc(50%-70px] sm:bottom-[calc(50%-90px] md:bottom-[calc(50%-100px)] lg:bottom-[calc(50%-110px)]"
+          className="absolute bottom-[calc(50%-70px] sm:bottom-[calc(50%-90px] md:bottom-[calc(50%-100px)] lg:bottom-[calc(50%-130px)]"
         >
           <Image
             src={"/images/profile.webp"}
@@ -32,7 +32,7 @@ export default function HeroText() {
             priority
             alt="Dicky DNS"
             className="h-full w-[120px] rounded-[16px] grayscale 
-            hover:grayscale-0 sm:w-[180px] md:w-[200px] md:rounded-[32px] lg:w-[calc(20vw-10vh)]"
+            hover:grayscale-0 sm:w-[180px] md:w-[200px] md:rounded-[32px] lg:w-[15em]"
           />
         </motion.div>
       </div>

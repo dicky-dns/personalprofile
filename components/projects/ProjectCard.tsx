@@ -72,26 +72,7 @@ export default function ProjectCard({
         aria-hidden="true"
         className="absolute left-0 top-0 ml-8 mt-6 flex items-center justify-center gap-4 lg:ml-14 lg:mt-10"
       >
-        <Link
-          href={repo}
-          target="_blank"
-          className="rounded-full bg-foreground p-2 transition-all duration-300 ease-in-out hover:bg-foreground/50"
-          aria-label="Open Github Repo"
-        >
-          <GithubIcon className="h-6 w-6 text-zinc-100 dark:text-zinc-800 md:h-8 md:w-8 lg:h-10 lg:w-10" />
-        </Link>
-        <Link
-          href={projectLink}
-          target="_blank"
-          className="rounded-full bg-foreground p-2 transition-all duration-300 ease-in-out hover:bg-foreground/50"
-          aria-label="Open Live Demo"
-        >
-          <LinkIcon className="h-6 w-6 text-zinc-100 dark:text-zinc-800 md:h-8 md:w-8 lg:h-10 lg:w-10" />
-        </Link>
-      </motion.div>
-
-      <div className="absolute left-10 top-32 mb-10 ml-0 text-foreground lg:top-52 lg:mb-14 lg:ml-4">
-        <h3 className="max-w-[90%] text-5xl font-bold leading-none text-foreground md:text-4xl md:leading-none lg:max-w-[450px] lg:text-5xl lg:leading-none">
+         <h3 className="max-w-[90%] text-5xl font-bold leading-none text-foreground md:text-4xl md:leading-none lg:max-w-[450px] lg:text-5xl lg:leading-none">
           <motion.span
             ref={ref}
             animate={ctrls}
@@ -102,6 +83,20 @@ export default function ProjectCard({
             {title}
           </motion.span>
         </h3>
+      </motion.div>
+
+      <div className="absolute left-10 top-32 mb-10 ml-0 text-foreground lg:top-52 lg:mb-14 lg:ml-4">
+        {/* <h3 className="max-w-[90%] text-5xl font-bold leading-none text-foreground md:text-4xl md:leading-none lg:max-w-[450px] lg:text-5xl lg:leading-none">
+          <motion.span
+            ref={ref}
+            animate={ctrls}
+            initial="hidden"
+            variants={projectCardTitleAnimation}
+            aria-hidden="true"
+          >
+            {title}
+          </motion.span>
+        </h3> */}
         <p className="mt-4 w-[90%] max-w-[454px] text-xs font-semibold text-foreground/50">
           <motion.span
             ref={ref}

@@ -16,7 +16,7 @@ export const projects = [
     title: "Project 2",
     description:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: "/images/project-2.png",
+    image: "/images/project-1.png",
     tech: ["React", "TypeScript", "Next.js", "TailwindCSS"],
     linkProject: "https://google.com",
     repo: "https://github.com/dicky-dns",
@@ -27,7 +27,7 @@ export const projects = [
     title: "Project 3",
     description:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: "/images/project-3.png",
+    image: "/images/project-1.png",
     tech: ["React", "TypeScript", "Next.js", "TailwindCSS"],
     linkProject: "https://google.com",
     repo: "https://github.com/dicky-dns",
@@ -38,7 +38,7 @@ export const projects = [
     title: "Project 4",
     description:
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    image: "/images/project-4.png",
+    image: "/images/project-1.png",
     tech: ["React", "TypeScript", "Next.js", "TailwindCSS"],
     linkProject: "https://google.com",
     repo: "https://github.com/dicky-dns",
