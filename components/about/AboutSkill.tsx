@@ -1,9 +1,45 @@
 // pages/index.js
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
-const AboutSkill = () => {
+export default function AboutSkill() {
+  const divRef = useRef<HTMLDivElement | null>(null); // Tambahkan tipe eksplisit
+  const [width, setWidth] = useState(0);
+  const [mobile, setMobile] = useState(0);
+
+
+  useEffect(() => {
+    const updateWidth = () => {
+      if (divRef.current) {
+        setWidth(divRef.current.offsetWidth);
+
+        if(window.innerWidth < 640){
+          setMobile(24)
+        }else{
+          setMobile(0)
+        }
+      }
+
+    
+    };
+
+    // ResizeObserver untuk mendeteksi perubahan ukuran div
+    const observer = new ResizeObserver(() => {
+      updateWidth();
+    });
+
+    if (divRef.current) {
+      observer.observe(divRef.current);
+      updateWidth(); // Update pertama kali saat komponen dimuat
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
+  console.log(width);
   return (
-    <div aria-hidden="true" className="relative flex w-full items-center justify-center overflow-hidden sm:p-4">
+    <div ref={divRef} aria-hidden="true" className="relative flex w-full items-center justify-center overflow-hidden sm:p-4">
       <div className="size-full flex w-full flex-col items-stretch justify-between gap-10">
           <div className="flex flex-row items-center justify-between">
               <div>
@@ -88,17 +124,44 @@ const AboutSkill = () => {
                   </svg>
               </div>
           </div>
-          <svg fill="none" width="0 0 1212.796875 546" height="546" xmlns="http://www.w3.org/2000/svg" className="pointer-events-none absolute left-0 top-0 transform-gpu stroke-2" viewBox="0 0 1212.796875 546">
-              <path d="M 44,44 Q 325.19921875,44 606.3984375,273" stroke="gray" strokeWidth={2} strokeOpacity={0.2} strokeLinecap="round"></path>
-              <path d="M 44,44 Q 325.19921875,44 606.3984375,273" strokeWidth={2} stroke="url(#:Rqhaula:)" strokeOpacity={1} strokeLinecap="round"></path>
-              <defs>
-                  <linearGradient className="transform-gpu" id=":Rqhaula:" gradientUnits="userSpaceOnUse" x1="93.18016%" x2="83.18016%" y1="0%" y2="0%">
-                      <stop stopColor="#ffaa40" stopOpacity={0}></stop>
-                      <stop stopColor="#ffaa40"></stop>
-                      <stop offset="32.5%" stopColor="#9c40ff"></stop>
-                      <stop offset="100%" stopColor="#9c40ff" stopOpacity={0}></stop>
-                  </linearGradient>
-              </defs>
+         <svg
+            fill="none"
+            width={width * 1.01}
+            height="546"
+            viewBox={`0 0 ${width * 1.01} 546`}
+            xmlns="http://www.w3.org/2000/svg"
+            className="pointer-events-none absolute left-0 top-0 transform-gpu stroke-2 w-full h-auto"
+          >
+            <path
+              d={`M ${44 - mobile},${44 - mobile} Q ${width *0.271},${44 - mobile} ${width * 0.505},${273 - (mobile *5)}`}
+              stroke="gray"
+              strokeWidth={2}
+              strokeOpacity={0.2}
+              strokeLinecap="round"
+            ></path>
+            <path
+               d={`M ${44 - mobile},${44 - mobile} Q ${width *0.271},${44 - mobile} ${width * 0.505},${273 - (mobile *5)}`}
+              strokeWidth={2}
+              stroke="url(#light-running)"
+              strokeOpacity={1}
+              strokeLinecap="round"
+            ></path>
+            <defs>
+              <linearGradient id="light-running" gradientUnits="userSpaceOnUse" x1="0%" x2="100%" y1="0%" y2="0%">
+                <stop stopColor="#fff" stopOpacity={0}>
+                  <animate attributeName="offset" values="0; 1" dur="2s" repeatCount="indefinite" />
+                </stop>
+                <stop stopColor="#fff">
+                  <animate attributeName="offset" values="0.1; 1.1" dur="2s" repeatCount="indefinite" />
+                </stop>
+                <stop offset="32.5%" stopColor="#fff">
+                  <animate attributeName="offset" values="0.2; 1.2" dur="2s" repeatCount="indefinite" />
+                </stop>
+                <stop offset="100%" stopColor="#fff" stopOpacity={0}>
+                  <animate attributeName="offset" values="0.3; 1.3" dur="2s" repeatCount="indefinite" />
+                </stop>
+              </linearGradient>
+            </defs>
           </svg>
           <svg fill="none" width="1212.796875" height="546" xmlns="http://www.w3.org/2000/svg" className="pointer-events-none absolute left-0 top-0 transform-gpu stroke-2" viewBox="0 0 1212.796875 546">
               <path d="M 44,140 Q 325.19921875,140 606.3984375,273" stroke="gray" strokeWidth={2} strokeOpacity={0.2} strokeLinecap="round"></path>
@@ -214,4 +277,3 @@ const AboutSkill = () => {
   );
 };
 
-export default AboutSkill;
