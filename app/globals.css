@@ -296,13 +296,6 @@
   padding: 10px 0;
 }
 
-.experience-title {
-  font-size: 21px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  color: #f4f4f4;
-}
-
 /* Marquee Wrapper */
 .experience-marquee-wrapper {
   overflow: hidden;

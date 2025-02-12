@@ -3,6 +3,7 @@ import AnimateTitle from "./AnimateTitle"
 import AboutText from './AboutText';
 import AboutExperience from "./AboutExperience"
 import Skills from "./AboutSkill";
+import GitHubEmbed from "./GithubEmbed";
 export default function About() {
   
   return (
@@ -21,14 +22,17 @@ export default function About() {
           <AboutGlobeAnimate />
         </div>
 
-        <div className="mx-auto flex w-full flex-col lg:max-w-[1200px] lg:flex-row lg:gap-20">
-          <div className="lg:mg-16 mb-3 flex w-full flex-col gap-4 text-[18px] font-medium leading-relaxed tracking-wide md:gap-6 md:text-[20px] md:leading-relaxed lg:text-base">
+        <div className="mx-auto flex w-full flex-col mb-9  lg:max-w-[1200px] lg:flex-row lg:gap-20">
+          <div className="lg:mg-16 flex w-full flex-col gap-4 text-[18px] font-medium leading-relaxed tracking-wide md:gap-6 md:text-[20px] md:leading-relaxed lg:text-base">
             <AboutText />
           </div>
         </div>
 
-        <div className="flex w-full flex-col justify-between gap-4 mt-3 lg:max-w-[1200px] ">
+        <div className="flex w-full flex-col justify-between gap-4 mb-7 lg:max-w-[1200px] ">
           <AboutExperience />
+        </div>
+        <div className="flex w-full flex-col justify-between gap-4 lg:max-w-[1200px] ">
+          <GitHubEmbed />
         </div>
         <div className="flex w-full flex-col justify-between gap-4 lg:max-w-[1200px] ">
           <Skills/>

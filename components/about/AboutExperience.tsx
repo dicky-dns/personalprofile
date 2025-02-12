@@ -62,7 +62,7 @@ export default function AboutExperience() {
       className="experience-section"
     >
       <div className="experience-marquee-wrapper">
-      <div className="experience-title">Experience</div>
+      <h2 className="text-xl font-bold mb-2">Experience</h2>
         <div ref={marqueeRef} className="experience-marquee py-[20px]">
           {experiences.map((experience, index) => (
             <div key={experience.id ? experience.id : `experience-${index}`} className="experience-card overflow-hidden p-px relative rounded-md bg-zinc-200 dark:bg-zinc-900">
