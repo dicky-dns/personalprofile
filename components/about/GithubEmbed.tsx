@@ -138,7 +138,7 @@ export default function  GitHubHeatmap() {
               ))}
             </div>
             <div className="flex">
-              <div className="flex flex-col text-sm text-gray-400 mr-2 justify-center">
+              <div className="flex flex-col text-sm mr-2 justify-center">
                 <div className="h-[28px] mt-1">Mon</div>
                 <div className="h-[28px] mt-3">Wed</div>
                 <div className="h-[28px] mt-3">Fri</div>
@@ -159,15 +159,15 @@ export default function  GitHubHeatmap() {
               </div>
             </div>
           </div>
-          <div className="flex justify-between">
+          <div className="flex justify-between px-6">
           <p className="mt-2 text-sm">{totalContributions} contributions in the last year</p>
-            <div className="flex items-center gap-2 mt-2 text-sm">
+            <div className="flex items-center gap-1 mt-2 text-sm">
               <span>Less</span>
-              <div className="w-4 h-4 bg-[#161b22]" />
-              <div className="w-4 h-4 bg-[#0e4429]" />
-              <div className="w-4 h-4 bg-[#006d32]" />
-              <div className="w-4 h-4 bg-[#26a641]" />
-              <div className="w-4 h-4 bg-[#39d353]" />
+              <div className="w-4 h-4 rounded-sm bg-[#161b22]" />
+              <div className="w-4 h-4 rounded-sm bg-[#0e4429]" />
+              <div className="w-4 h-4 rounded-sm bg-[#006d32]" />
+              <div className="w-4 h-4 rounded-sm bg-[#26a641]" />
+              <div className="w-4 h-4 rounded-sm bg-[#39d353]" />
               <span>More</span>
             </div>
             </div>
