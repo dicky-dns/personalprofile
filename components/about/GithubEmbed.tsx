@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import { gql, GraphQLClient } from 'graphql-request';
 import { format, parseISO } from 'date-fns';
 import { useAnimation, useInView, motion } from "framer-motion";
+import { enUS } from "date-fns/locale";
 
 const GITHUB_GRAPHQL_URL = 'https://api.github.com/graphql';
 const ACCESS_TOKEN = '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';
@@ -111,7 +112,11 @@ export default function  GitHubHeatmap() {
   const currentMonth = format(new Date(), "MMM");
   
   fullMonths.push(currentMonth);
-
+  
+  const formatDate = (dateString: string): string => {
+    return format(new Date(dateString), "MMMM do.", { locale: enUS });
+  };
+  
 
   return (
     <motion.div
@@ -143,15 +148,15 @@ export default function  GitHubHeatmap() {
                 <div className="h-[28px] mt-3">Wed</div>
                 <div className="h-[28px] mt-3">Fri</div>
               </div>
+      
               <div className="flex gap-1">
                 {data.map((week, weekIndex) => (
                   <div key={weekIndex} className="flex flex-col gap-1">
                     {week.contributionDays.map((day, dayIndex) => (
                       <div
                         key={dayIndex}
-                        className="w-4 h-4 rounded-sm"
-                        style={{ backgroundColor: getColor(day.contributionCount) }}
-                        title={`${day.date}: ${day.contributionCount} contributions`}
+                        className={`w-4 h-4 rounded-sm ${getColor(day.contributionCount)}`}
+                        title={`${day.contributionCount > 0 ? day.contributionCount : "No"} contributions on ${formatDate(day.date)}`}
                       />
                     ))}
                   </div>
@@ -159,17 +164,18 @@ export default function  GitHubHeatmap() {
               </div>
             </div>
           </div>
-          <div className="flex justify-between px-6">
-          <p className="mt-2 text-sm">{totalContributions} contributions in the last year</p>
-            <div className="flex items-center gap-1 mt-2 text-sm">
-              <span>Less</span>
-              <div className="w-4 h-4 rounded-sm bg-[#161b22]" />
-              <div className="w-4 h-4 rounded-sm bg-[#0e4429]" />
-              <div className="w-4 h-4 rounded-sm bg-[#006d32]" />
-              <div className="w-4 h-4 rounded-sm bg-[#26a641]" />
-              <div className="w-4 h-4 rounded-sm bg-[#39d353]" />
-              <span>More</span>
-            </div>
+          <div className="flex flex-wrap justify-between px-2 md:px-6">
+            <p className="mt-2 text-sm">{totalContributions} contributions in the last year</p>
+              <div className="flex items-center gap-1 mt-2 text-sm">
+                <span>Less</span>
+                <div className="w-4 h-4 rounded-sm bg-zinc-300 dark:bg-zinc-900" />
+                <div className="w-4 h-4 rounded-sm bg-[#9be9a8] dark:bg-[#0e4429]" />
+                <div className="w-4 h-4 rounded-sm bg-[#40c463] dark:bg-[#006d32]" />
+                <div className="w-4 h-4 rounded-sm bg-[#30a14e] dark:bg-[#26a641]" />
+                <div className="w-4 h-4 rounded-sm bg-[#216e39] dark:bg-[#39d353]" />
+                <span>More</span>
+              </div>
+   
             </div>
         </div>
     </motion.div>
@@ -177,10 +183,10 @@ export default function  GitHubHeatmap() {
 };
 
 const getColor = (count: number): string => {
-  if (count === 0) return '#161b22';
-  if (count < 4) return '#0e4429';
-  if (count < 10) return '#006d32';
-  if (count < 20) return '#26a641';
-  return '#39d353';
+  if (count === 0) return 'bg-zinc-300 dark:bg-zinc-900';
+  if (count < 4) return 'bg-[#9be9a8] dark:bg-[#0e4429]';
+  if (count < 6) return 'bg-[#40c463] dark:bg-[#006d32]';
+  if (count < 10) return 'bg-[#30a14e] dark:bg-[#26a641]';
+  return 'bg-[#216e39] dark:bg-[#39d353]';
 };
 
