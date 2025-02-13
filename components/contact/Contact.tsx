@@ -10,7 +10,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-      className="contact-section relative z-[0] mt-24 flex min-h-screen w-full flex-col items-center justify-center overflow-x-clip bg-zinc-800 dark:bg-zinc-100"
+      className="contact-section relative z-[0] mt-24 flex min-h-screen w-full flex-col items-center justify-center overflow-x-clip bg-zinc-200 dark:bg-zinc-800"
     >
       <ContactRounded />
       <div className="w-full overflow-hidden px-[5%]">
@@ -19,7 +19,7 @@ export default function Contact() {
           <ContactForm />
           <div className="flex w-full justify-between py-12">
             <div className="flex flex-col items-end">
-              <p className="mb-4 text-xl font-semibold text-zinc-200 dark:text-zinc-800">
+              <p className="mb-4 text-xl font-semibold text-zinc-800 dark:text-zinc-200">
                 Links
               </p>
               <div className="flex items-center gap-x-2">
@@ -27,21 +27,21 @@ export default function Contact() {
                   href="https://instagram.com/dickydns"
                   label="Instagram"
                   icon={
-                    <InstagramIcon className="text-zinc-200 dark:text-zinc-800" />
+                    <InstagramIcon className="text-zinc-800 dark:text-zinc-200" />
                   }
                 />
                 <ContactLink
                   href="mailto:dickydns1@gmail.com"
                   label="Email"
                   icon={
-                    <MailIcon className="text-zinc-200 dark:text-zinc-800" />
+                    <MailIcon className="text-zinc-800 dark:text-zinc-200" />
                   }
                 />
                 <ContactLink
                   href="https://www.linkedin.com/in/dickydns/"
                   label="LinkedIn"
                   icon={
-                    <LinkedinIcon className="text-zinc-200 dark:text-zinc-800" />
+                    <LinkedinIcon className="text-zinc-800 dark:text-zinc-200" />
                   }
                 />
               </div>

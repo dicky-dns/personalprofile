@@ -41,7 +41,7 @@ export default function AboutText() {
   }, []);
 
   return (
-    <p ref={paragraphRef} className="paragraph-about flex flex-wrap text-justify text-base md:text-lg leading-none tracking-wide ">
+    <p ref={paragraphRef} className="paragraph-about select-none flex flex-wrap text-justify text-base md:text-lg leading-none tracking-wide ">
       {splitText({text})}
     </p>
   );
