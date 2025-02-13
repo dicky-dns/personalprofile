@@ -42,7 +42,7 @@ export default function ProjectTitleAnimate() {
       className="mb-10 flex w-full items-center justify-between md:mb-16"
     >
       <h2 className="text-4xl font-bold md:text-5xl lg:text-7xl">
-        Recent Projects
+        Recent works
       </h2>
       <GlobeAnimate/>
     </motion.div>

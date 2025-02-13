@@ -169,7 +169,7 @@ export default function  GitHubHeatmap() {
               <div className="flex items-center gap-1 mt-2 text-sm">
                 <span>Less</span>
                 <div className="w-4 h-4 rounded-sm bg-zinc-300 dark:bg-zinc-900" />
-                <div className="w-4 h-4 rounded-sm bg-[#9be9a8] dark:bg-[#0e4429]" />
+                <div className="w-4 h-4 rounded-sm bg-[#88d394] dark:bg-[#0e4429]" />
                 <div className="w-4 h-4 rounded-sm bg-[#40c463] dark:bg-[#006d32]" />
                 <div className="w-4 h-4 rounded-sm bg-[#30a14e] dark:bg-[#26a641]" />
                 <div className="w-4 h-4 rounded-sm bg-[#216e39] dark:bg-[#39d353]" />
@@ -184,7 +184,7 @@ export default function  GitHubHeatmap() {
 
 const getColor = (count: number): string => {
   if (count === 0) return 'bg-zinc-300 dark:bg-zinc-900';
-  if (count < 4) return 'bg-[#9be9a8] dark:bg-[#0e4429]';
+  if (count < 4) return 'bg-[#88d394] dark:bg-[#0e4429]';
   if (count < 6) return 'bg-[#40c463] dark:bg-[#006d32]';
   if (count < 10) return 'bg-[#30a14e] dark:bg-[#26a641]';
   return 'bg-[#216e39] dark:bg-[#39d353]';
