@@ -23,16 +23,16 @@ export default function HeroText() {
               ease: [0.2, 0.65, 0.3, 0.9],
             },
           }}
-          className="absolute bottom-[calc(50%-70px] sm:bottom-[calc(50%-90px] md:bottom-[calc(50%-100px)] lg:bottom-[calc(50%-130px)]"
+          className="absolute bottom-0 xl:bottom-[-2px]"
         >
           <Image
-            src={"/images/profile.webp"}
+            src={"/images/profile.png"}
             width={150}
             height={150}
             priority
             alt="Dicky DNS"
-            className="h-full w-[120px] rounded-[16px] grayscale 
-            hover:grayscale-0 sm:w-[180px] md:w-[200px] md:rounded-[32px] lg:w-[15em]"
+            className="h-full w-[160px] rounded-[16px] grayscale 
+            hover:grayscale-0 sm:w-[240px] md:w-[290px] md:rounded-[32px] lg:w-[360px]"
           />
         </motion.div>
       </div>

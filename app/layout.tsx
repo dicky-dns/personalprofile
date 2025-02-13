@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     siteName: "Dicky DNS",
     images: [
       {
-        url: "/public/images/profile.webp",
+        url: "/public/images/profile.png",
         width: 1000,
         height: 1200,
       },
@@ -74,7 +74,7 @@ export const metadata: Metadata = {
     creator: "@dickydns",
     images: [
       {
-        url: "/public/images/profile.webp",
+        url: "/public/images/profile.png",
         width: 1000,
         height: 1200,
       },
