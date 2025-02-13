@@ -61,6 +61,7 @@ function Birds() {
 export default function HeroGraphic() {
   return (
     <motion.div
+    className="relative mt-[-100px] md:mt-0"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay: 0, duration: 1 }}
