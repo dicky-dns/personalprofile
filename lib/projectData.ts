@@ -2,13 +2,11 @@ export const projects = [
   {
     id: 1,
     slug: "project-1",
-    title: "Project 1",
+    title: "Anabata : design & development",
     description:
-      "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "This website provides an architectural media platform offering news, insights, design inspiration, videos, and architectural events.",
     image: "/images/project-1.png",
-    tech: ["React", "TypeScript", "Next.js", "TailwindCSS"],
-    linkProject: "https://google.com",
-    repo: "https://github.com/dicky-dns",
+    tech: ["Php", "Laravel", "JQuery", "Bootstrap"],
   },
   {
     id: 2,
@@ -18,8 +16,6 @@ export const projects = [
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: "/images/project-1.png",
     tech: ["React", "TypeScript", "Next.js", "TailwindCSS"],
-    linkProject: "https://google.com",
-    repo: "https://github.com/dicky-dns",
   },
   {
     id: 3,
@@ -29,8 +25,6 @@ export const projects = [
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: "/images/project-1.png",
     tech: ["React", "TypeScript", "Next.js", "TailwindCSS"],
-    linkProject: "https://google.com",
-    repo: "https://github.com/dicky-dns",
   },
   {
     id: 4,
@@ -40,7 +34,5 @@ export const projects = [
       "lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     image: "/images/project-1.png",
     tech: ["React", "TypeScript", "Next.js", "TailwindCSS"],
-    linkProject: "https://google.com",
-    repo: "https://github.com/dicky-dns",
   },
 ]
