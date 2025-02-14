@@ -14,11 +14,10 @@ export default function Projects() {
           <ProjectCard
             key={index}
             title={project.title}
+            subtitle={project.subtitle}
             description={project.description}
             image={project.image}
             tech={project.tech}
-            repo={project.repo}
-            projectLink={project.linkProject}
           />
         ))}
       </div>

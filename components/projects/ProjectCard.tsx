@@ -15,6 +15,7 @@ import {
 
 interface ProjectCardProps {
   title: string
+  subtitle: string
   description: string
   image: string
   tech: string[]
@@ -24,11 +25,10 @@ interface ProjectCardProps {
 
 export default function ProjectCard({
   title,
+  subtitle,
   description,
   image,
   tech,
-  repo,
-  projectLink,
 }: ProjectCardProps) {
   const ref = useRef(null)
   const isInView = useInView(ref)
@@ -69,6 +69,17 @@ export default function ProjectCard({
             {title}
           </motion.span>
         </h3>
+        <p className="text-lg lg:text-2xl font-semibold lg:mt-2">
+          <motion.span
+            ref={ref}
+            animate={ctrls}
+            initial="hidden"
+            variants={projectCardTitleAnimation}
+            aria-hidden="true"
+          >
+            {subtitle}
+          </motion.span>
+        </p>
       </motion.div>
 
       <div className="relative lg:absolute left-5 top-0 mb-10 ml-0 text-foreground lg:left-10 lg:top-52 lg:mb-14 lg:ml-4">
