@@ -42,7 +42,7 @@ export const AnimateWords = ({ title, style }: AnimateWordsProps) => {
         ref={ref}
         className="flex flex-col text-center whitespace-nowrap text-[80px] font-extrabold 
         leading-[0.8em] text-zinc-800 dark:text-zinc-200 sm:text-[120px] 
-        sm:leading-[0.85em] md:text-[155.5px] lg:text-[clamp(1.25rem,calc(18vw-9vh),190px)]"
+        sm:leading-[0.85em] md:text-[125px] lg:text-[140px] xxl:text[190px]"
       >
         {title.split("-").map((word, index) => (
           <motion.div

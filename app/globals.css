@@ -340,7 +340,7 @@
 .glow {
   animation: move 15s linear infinite;
   offset-path: rect(0% auto 100% auto);
-  background: radial-gradient(#818181, #898989, transparent);
+  background: radial-gradient(#dddddd, #cecece, transparent);
 }
 
 @keyframes move {
