@@ -4,8 +4,8 @@ import { useAnimation, useInView, motion } from "framer-motion";
 import { experiences } from "@/lib/experienceData";
 
 export default function AboutExperience() {
-  const marqueeRef = useRef(null);
-  const ref = useRef<HTMLDivElement | null>(null);
+  const marqueeRef = useRef<HTMLDivElement | null>(null);
+  const ref = useRef(null);
   const inView = useInView(ref);
   const ctrls = useAnimation();
 
@@ -36,7 +36,7 @@ export default function AboutExperience() {
     }
   }, [ctrls, inView, hasAnimated]);
 
-  const AnimationSocialMedia = {
+  const AnimationExperience = {
     hidden: {
       opacity: 0,
       y: `1em`,
@@ -58,22 +58,22 @@ export default function AboutExperience() {
       aria-hidden="true"
       initial="hidden"
       animate={ctrls}
-      variants={AnimationSocialMedia}
-      className="experience-section"
+      variants={AnimationExperience}
+      className="experience-section py-[10px]"
     >
-      <div className="experience-marquee-wrapper">
+      <div className="w-full overflow-x-hidden">
       <h2 className="text-xl font-bold mb-6">Experience</h2>
-        <div ref={marqueeRef} className="experience-marquee">
+        <div ref={marqueeRef} className="gap-[20px] inline-flex">
           {experiences.map((experience, index) => (
-            <div key={experience.id ? experience.id : `experience-${index}`} className="experience-card overflow-hidden p-px relative rounded-md bg-zinc-200 dark:bg-zinc-900">
+            <div key={experience.id ? experience.id : `experience-${index}`} className="min-w-[360px] overflow-hidden p-px relative rounded-md bg-zinc-200 dark:bg-zinc-900">
               <div className="inline-block space-y-2 bg-zinc-200 dark:bg-zinc-800 rounded-md w-[100%] z-10 relative px-5 py-5">
                 <div className="text-foreground mb-4 font-semibold text-[15px]">
                   {experience.title}
                 </div>
-                <div className="experience-card-year pt-2">
+                <div className="text-xs mb-1 pt-2">
                   {experience.period}
                 </div>
-                <div className="experience-card-position">
+                <div className="text-[13px]">
                   {experience.position}
                 </div>
               </div>
