@@ -82,7 +82,7 @@ export default function ProjectCard({
           </p>
         </motion.div>
 
-        <div className="relative lg:absolute left-5 top-0 mb-10 ml-0 text-foreground lg:left-10 lg:top-52 lg:mb-14 lg:ml-4">
+        <div className="relative lg:absolute left-5 top-0 mb-10 ml-0 text-foreground lg:left-10 lg:top-40 lg:mb-14 lg:ml-4">
           <p className="mt-4 w-[90%] max-w-[454px] text-sm text-foreground/80">
             <motion.span
               ref={ref}

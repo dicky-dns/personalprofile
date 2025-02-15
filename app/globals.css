@@ -276,61 +276,27 @@
   }
 }
 
+@media screen and (max-width: 575px) {
+  .globe {
+    width: 2.5em;
+    height: 2.5em;
+  }
+}
+
 .paragraph-about {
   transition: opacity 1s ease-in-out;
 }
 
 .text-about {
   display: inline-block;
-  opacity: 0.3; /* Setiap kata dimulai dengan transparansi 0 */
-  transform: translateY(10px); /* Menggerakkan kata sedikit ke bawah */
+  opacity: 0.3;
+  transform: translateY(10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
   margin-right: 6px;
   margin-bottom: 8px;
   font-weight: 400;
   font-size: 15px;
   line-height: 1.6;
-}
-
-.experience-section {
-  padding: 10px 0;
-}
-
-/* Marquee Wrapper */
-.experience-marquee-wrapper {
-  overflow: hidden;
-  white-space: nowrap;
-  width: 100%;
-}
-
-.experience-marquee {
-  display: inline-flex;
-  gap: 20px;
-  will-change: transform;
-}
-
-/* Card Styles */
-.experience-card {
-  border-radius: 8px;
-  padding: 1px;
-  min-width: 200px;
-  font-size: 1.1rem;
-  transition: transform 0.3s ease;
-  min-width: 360px;
-}
-
-.experience-card-company{
-  margin-bottom: 20px;
-  font-size: 15px;
-}
-
-.experience-card-year{
-  margin-bottom: 5px;
-  font-size: 12px;
-}
-
-.experience-card-position{
-  font-size: 13px;
 }
 
 .experience-card:hover {

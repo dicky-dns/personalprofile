@@ -17,7 +17,7 @@ export default function AboutText() {
   };
 
   useEffect(() => {
-    const words = paragraphRef.current?.querySelectorAll('.text-about');
+    const words = paragraphRef.current?.querySelectorAll('.text-about') ?? '';
 
     gsap.registerPlugin(ScrollTrigger);
     gsap.fromTo(
