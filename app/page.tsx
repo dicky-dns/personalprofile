@@ -5,7 +5,7 @@ import Contact from "@/components/contact/Contact"
 import Hero from "@/components/hero/Hero"
 import Nav from "@/components/navbar/Nav"
 import Projects from "@/components/projects/Projects"
-import { useEffect, useState } from "react"
+import { useEffect } from "react"
 
 export default function Home() {
   useEffect(() => {

@@ -9,7 +9,7 @@ export default function HeroText() {
       <div className="relative flex flex-col items-center justify-center">
         <AnimateWords
           title="DICKY-DWI NUR-SETYO"
-          style="inline-block overflow-hidden pt-1 -mr-0 sm:-mr-5 md:-mr-7 lg:-mr-9 -mb-1 sm:-mb-2 md:-mb-3 lg:-mb-4"
+          style="inline-block overflow-hidden pt-1 -mr-0 sm:-mr-5 md:-mr-7 lg:-mr-9 leading-[0.73]"
         />
         <motion.div
           initial={{ y: 50, opacity: 0, scale: 0.8 }}
@@ -32,7 +32,7 @@ export default function HeroText() {
             priority
             alt="Dicky DNS"
             className="h-full w-[160px] rounded-[16px] grayscale 
-            hover:grayscale-0 sm:w-[240px] md:w-[290px] md:rounded-[32px] lg:w-[360px]"
+            hover:grayscale-0 sm:w-[240px] md:w-[260px] md:rounded-[32px] lg:w-[270px] 2xl:w-[360px]"
           />
         </motion.div>
       </div>

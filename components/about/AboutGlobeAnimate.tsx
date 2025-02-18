@@ -39,7 +39,7 @@ export default function AboutGlobeAnimate() {
       animate={ctrls}
       variants={globeAnimation}
     >
-      <DigitalGlobe className="hidden h-24 w-24 block bg-zinc-200 dark:bg-zinc-800" />
+      <DigitalGlobe className="hidden h-24 w-24 block lg:bg-zinc-200 lg:dark:bg-zinc-800" />
     </motion.div>
   )
 }
