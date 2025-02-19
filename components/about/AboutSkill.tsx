@@ -1,15 +1,22 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { motion, useAnimation, useInView } from "framer-motion"
 
 export default function AboutSkill() {
-  const divRef = useRef<HTMLDivElement | null>(null); // Tambahkan tipe eksplisit
+  const ref = useRef<HTMLDivElement | null>(null); 
+  const isInView = useInView(ref)
+  const ctrls = useAnimation()
   const [width, setWidth] = useState(0);
   const [mobile, setMobile] = useState(0);
 
 
   useEffect(() => {
     const updateWidth = () => {
-      if (divRef.current) {
-        setWidth(divRef.current.offsetWidth);
+      if (isInView) {
+        ctrls.start("visible") 
+      } 
+
+      if (ref.current) {
+        setWidth(ref.current.offsetWidth);
 
         if(window.innerWidth < 640){
           setMobile(24)
@@ -23,18 +30,41 @@ export default function AboutSkill() {
       updateWidth();
     });
 
-    if (divRef.current) {
-      observer.observe(divRef.current);
+    if (ref.current) {
+      observer.observe(ref.current);
       updateWidth(); 
     }
 
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [ctrls, isInView]);
+
+  const skillAnimation = {
+    hidden: {
+      opacity: 0,
+      y: `1em`,
+    },
+    visible: {
+      opacity: 1,
+      y: `0em`,
+      transition: {
+        duration: 1.8,
+        delay: 1,
+        ease: [0.2, 0.65, 0.3, 0.9],
+      },
+    },
+  }
 
   return (
-    <div ref={divRef} aria-hidden="true" className="relative flex w-full items-center justify-center overflow-hidden sm:p-4">
+    <motion.div 
+      ref={ref} 
+      animate={ctrls}
+      initial="hidden"
+      variants={skillAnimation}
+      aria-hidden="true" 
+      className="relative flex w-full items-center justify-center overflow-hidden sm:p-4"
+      >
       <div className="size-full flex w-full flex-col items-stretch justify-between gap-10">
         <div className="flex flex-row items-center justify-between">
             <div>
@@ -479,7 +509,7 @@ export default function AboutSkill() {
           </defs>
         </svg>
       </div>
-    </div>
+    </motion.div>
 
   );
 };
