@@ -125,7 +125,7 @@ export default function GitHubHeatmap() {
       variants={AnimationGithub}
       className="github-section"
     >
-      <h2 className="text-xl font-bold mb-6">Contributions</h2>
+      <h2 className="text-xl lg:text-4xl font-bold mb-6 lg:mb-8">Contributions</h2>
       <div className="relative z-10 w-full items-stretch justify-center overflow-hidden rounded-xl p-4 bg-zinc-200 dark:bg-zinc-800">
         <div className="overflow-x-auto p-2 rounded-md">
           <div className="pl-[7px] flex mb-2 text-sm w-full">

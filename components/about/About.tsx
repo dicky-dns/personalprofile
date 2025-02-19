@@ -22,16 +22,16 @@ export default function About() {
           <AboutGlobeAnimate />
         </div>
 
-        <div className="mx-auto flex w-full flex-col mb-9  lg:max-w-[1200px] lg:flex-row lg:gap-20">
+        <div className="mx-auto flex w-full flex-col mb-9 lg:mb-14 lg:max-w-[1200px] lg:flex-row lg:gap-20">
           <div className="lg:mg-16 flex w-full flex-col gap-4 text-[18px] font-medium leading-relaxed tracking-wide md:gap-6 md:text-[20px] md:leading-relaxed lg:text-base">
             <AboutText />
           </div>
         </div>
 
-        <div className="flex w-full flex-col justify-between gap-4 mb-7 lg:max-w-[1200px] ">
+        <div className="flex w-full flex-col justify-between gap-4 mb-7 lg:mb-14 lg:max-w-[1200px] ">
           <AboutExperience />
         </div>
-        <div className="flex w-full flex-col justify-between gap-4 mb-11 lg:max-w-[1200px] ">
+        <div className="flex w-full flex-col justify-between gap-4 mb-11 lg:mb-13 lg:max-w-[1200px] ">
           <GitHubEmbed />
         </div>
         <div className="flex w-full flex-col justify-between gap-4 lg:max-w-[1200px] ">
