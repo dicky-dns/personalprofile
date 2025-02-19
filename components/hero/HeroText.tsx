@@ -32,7 +32,7 @@ export default function HeroText() {
             priority
             alt="Dicky DNS"
             className="h-full w-[160px] rounded-[16px] grayscale 
-            hover:grayscale-0 sm:w-[240px] md:w-[260px] md:rounded-[32px] lg:w-[270px] 2xl:w-[360px]"
+            hover:grayscale-0 sm:w-[240px] md:w-[260px] md:rounded-[32px] lg:w-[350px] 2xl:w-[360px] 3xl:w-[380px]"
           />
         </motion.div>
       </div>
