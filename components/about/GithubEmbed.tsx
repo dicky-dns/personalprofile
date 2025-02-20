@@ -119,7 +119,7 @@ export default function GitHubHeatmap() {
 
   return (
     <motion.div
-      ref={ref} // 🔥 Pastikan ref digunakan di elemen yang diamati
+      ref={ref} 
       initial="hidden"
       animate={ctrls}
       variants={AnimationGithub}
