@@ -52,15 +52,12 @@ export default function AboutText() {
 
   return (
     <div ref={paragraphRef}>
-      {/* Paragraf 1 */}
       <p className="paragraph-about select-none flex flex-wrap text-justify text-base md:text-lg leading-relaxed tracking-wide mb-4">
         {splitText(paragraphOne)}
       </p>
-      {/* Paragraf 2 */}
       <p className="paragraph-about select-none flex flex-wrap text-justify text-base md:text-lg leading-relaxed tracking-wide">
         {splitText(paragraphTwo)}
       </p>
-
       <p className="paragraph-about select-none flex flex-wrap text-justify text-base md:text-lg leading-relaxed tracking-wide">
         {splitText(paragraphThree)}
       </p>
