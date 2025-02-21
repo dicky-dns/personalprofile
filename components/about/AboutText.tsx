@@ -13,7 +13,6 @@ export default function AboutText() {
   const paragraphTwo = `Looking for ways to grow?`;
   const paragraphThree = `Check out my Bookmark — a curated collection of links, videos, and other resources to help you level up your skills.`;
 
-  // Fungsi untuk memisahkan kata-kata dan memberikan animasi
   const splitText = (text: string) => {
     return text.split(" ").map((word, index) => {
       if (word.includes("Bookmark")) {
