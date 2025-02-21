@@ -6,9 +6,7 @@ import Link from "next/link";
 export default function AboutText() {
   const paragraphRef = useRef<HTMLDivElement | null>(null);
 
-  // Paragraf pertama
   const paragraphOne = `Hello! 👋🏼 I’m Dicky, and I currently live in Surakarta, Indonesia. I'm a programmer with over 3 years of experience, I’m a versatile Web Developer skilled in designing, developing, and managing websites, with a particular focus on PHP and JavaScript. As a self-taught developer, I’m passionate about creating engaging and interactive websites. I’m not just a coder, but also a problem solver, and a lifelong learner—constantly eager to explore new things. Taking an unconventional route, I chose hands-on learning and real-world applications which has helped me build resilience and adaptability in my approach. Currently, I work as a Web Developer at a company in Surakarta (Solo). I’m always open to new opportunities and collaborations, so feel free to reach out to me! 🚀`;
-
   const paragraphTwo = `Looking for ways to grow?`;
   const paragraphThree = `Check out my Bookmark — a curated collection of links, videos, and other resources to help you level up your skills.`;
 
