@@ -287,7 +287,7 @@
   transition: opacity 1s ease-in-out;
 }
 
-.text-about {
+.text-about,.text-about a {
   display: inline-block;
   opacity: 0.3;
   transform: translateY(10px);
@@ -297,6 +297,10 @@
   font-weight: 400;
   font-size: 15px;
   line-height: 1.6;
+}
+
+a.text-about{
+  color: aqua;
 }
 
 .experience-card:hover {
