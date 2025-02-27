@@ -9,7 +9,7 @@ export default function HeroText() {
       <div className="relative flex flex-col items-center justify-center">
         <AnimateWords
           title="DICKY-DWI NUR-SETYO"
-          style="inline-block overflow-hidden pt-[1.4rem] md:pt-1 -mr-0 sm:-mr-5 md:-mr-7 lg:-mr-9 leading-[0.73]"
+          style="inline-block overflow-hidden pt-[1.4rem] md:pt-[1.1rem] -mr-0 sm:-mr-5 md:-mr-7 lg:-mr-9 leading-[0.73]"
         />
         <motion.div
           initial={{ y: 50, opacity: 0, scale: 0.8 }}
