@@ -5,11 +5,11 @@ import Image from "next/image"
 
 export default function HeroText() {
   return (
-    <div className="flex flex-col items-center justify-center">
+    <div className="flex flex-col items-center justify-center w-full overflow-hidden">
       <div className="relative flex flex-col items-center justify-center">
         <AnimateWords
           title="DICKY-DWI NUR-SETYO"
-          style="inline-block overflow-hidden pt-1 -mr-0 sm:-mr-5 md:-mr-7 lg:-mr-9 leading-[0.73]"
+          style="inline-block overflow-hidden pt-[1.4rem] md:pt-1 -mr-0 sm:-mr-5 md:-mr-7 lg:-mr-9 leading-[0.73]"
         />
         <motion.div
           initial={{ y: 50, opacity: 0, scale: 0.8 }}
@@ -31,7 +31,7 @@ export default function HeroText() {
             height={150}
             priority
             alt="Dicky DNS"
-            className="h-full w-[160px] rounded-[16px] grayscale 
+            className="h-full w-[210px] rounded-[16px] grayscale 
             hover:grayscale-0 sm:w-[240px] md:w-[260px] md:rounded-[32px] lg:w-[350px] 2xl:w-[360px] 3xl:w-[380px]"
           />
         </motion.div>
