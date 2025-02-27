@@ -40,7 +40,7 @@ export const AnimateWords = ({ title, style }: AnimateWordsProps) => {
     <h1 aria-label={title} role="heading">
       <motion.span
         ref={ref}
-        className="flex flex-col text-center whitespace-nowrap text-[80px] font-extrabold 
+        className="flex flex-col text-center whitespace-nowrap text-[90px] font-extrabold 
         leading-[0.8em] text-zinc-800 dark:text-zinc-200 sm:text-[120px] 
         sm:leading-[0.85em] md:text-[125px] lg:text-[190px] 2xl:text-[200px] 3xl:text[310px]"
       >
