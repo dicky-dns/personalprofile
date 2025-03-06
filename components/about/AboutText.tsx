@@ -2,6 +2,8 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaperclip } from "@fortawesome/free-solid-svg-icons";
 
 export default function AboutText() {
   const paragraphRef = useRef<HTMLDivElement | null>(null);
@@ -16,6 +18,7 @@ export default function AboutText() {
         return (
           <Link key={index} href="/bookmark" className="text-about text-blue">
             {word}{" "}
+            <FontAwesomeIcon icon={faPaperclip} className="text-xs opacity-[.9]" />
           </Link>
         );
       }
