@@ -40,7 +40,7 @@ export default function BookmarkTitle() {
       className=""
     >
       <h2 className="">
-        Recent
+        Bookmark
       </h2>
     </motion.div>
   )
