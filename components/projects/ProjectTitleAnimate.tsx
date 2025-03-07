@@ -1,7 +1,6 @@
 "use client"
 
 import { useAnimation, useInView, motion } from "framer-motion"
-import { Sparkles } from "lucide-react"
 import { useEffect, useRef } from "react"
 import GlobeAnimate from "./GlobeAnimate"
 
