@@ -16,7 +16,7 @@ export default function AboutText() {
     return text.split(" ").map((word, index) => {
       if (word.includes("Bookmark")) {
         return (
-          <Link key={index} href="/bookmark" className="text-about text-blue">
+          <Link key={index} href="/bookmarks" className="text-about text-blue">
             {word}{" "}
             <FontAwesomeIcon icon={faPaperclip} className="text-xs opacity-[.9]" />
           </Link>
