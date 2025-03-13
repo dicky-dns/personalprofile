@@ -323,3 +323,27 @@ a.text-about{
   }
 }
 
+#scroll-animate {
+  animation: scrollAnim 1700ms ease infinite;
+}
+
+[data-anim][data-anim].has-animate {
+  animation-duration: 2000ms;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes scrollAnim {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, 100%, 0);
+    opacity: 0;
+  }
+}
+
+
