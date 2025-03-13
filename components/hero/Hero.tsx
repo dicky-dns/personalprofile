@@ -5,6 +5,7 @@ import HeroText from "./HeroText"
 import ParallaxText from "./ParallaxText"
 import HeroGraphic from "./HeroGraphic"
 import Located from "./Located"
+import ScrollAnimate from "./ScrollAnimate"
 
 export default function Hero() {
   return (
@@ -20,6 +21,7 @@ export default function Hero() {
           <ParallaxText direction={500} baseVelocity={-1}>
             Web Developer
           </ParallaxText>
+          <ScrollAnimate/>
         </div>
         <Located/>
     </motion.section>
