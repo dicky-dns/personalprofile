@@ -73,7 +73,7 @@ export default function AboutExperience() {
                 <div className="text-xs mb-1 pt-2">
                   {experience.period}
                 </div>
-                <div className="text-[13px]">
+                <div className="text-[13px]"> 
                   {experience.position}
                 </div>
               </div>

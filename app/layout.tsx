@@ -38,7 +38,6 @@ export const metadata: Metadata = {
     "Dicky Dwi Nur Setyo",
     "dickydns",
     "web developer",
-    "web developer",
     "web programmer",
     "react",
     "nextjs",

@@ -29,7 +29,6 @@ export default function NavMenuLink({
         0
       )
     }, el)
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   useEffect(() => {
