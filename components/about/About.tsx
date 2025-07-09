@@ -31,9 +31,11 @@ export default function About() {
         <div className="flex w-full flex-col justify-between gap-4 mb-7 lg:mb-14 lg:max-w-[1200px] ">
           <AboutExperience />
         </div>
+
         <div className="flex w-full flex-col justify-between gap-4 mb-11 lg:mb-13 lg:max-w-[1200px] ">
           <GitHubEmbed />
         </div>
+        
         <div className="flex w-full flex-col justify-between gap-4 lg:max-w-[1200px] ">
           <Skills/>
         </div>
