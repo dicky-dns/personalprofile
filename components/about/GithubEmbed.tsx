@@ -7,12 +7,12 @@ import { useAnimation, useInView, motion } from "framer-motion";
 import { enUS } from "date-fns/locale";
 
 const GITHUB_GRAPHQL_URL = 'https://api.github.com/graphql';
-const ACCESS_TOKEN = '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';
-const USERNAME = 'dicky-dns';
+const ACCESS_TOKEN = process.env.NEXT_PUBLIC_GITHUB_ACCESS_TOKEN;
+const USERNAME = process.env.NEXT_PUBLIC_GITHUB_USERNAME;
 
-const query = gql`
+const buildContributionQuery = (username: string) => gql`
   {
-    user(login: "${USERNAME}") {
+    user(login: "${username}") {
       contributionsCollection {
         contributionCalendar {
           totalContributions
@@ -47,6 +47,11 @@ export default function GitHubHeatmap() {
 
   useEffect(() => {
     const fetchData = async () => {
+      if (!ACCESS_TOKEN || !USERNAME) {
+        setError(new Error('Missing GitHub credentials'));
+        return;
+      }
+
       const client = new GraphQLClient(GITHUB_GRAPHQL_URL, {
         headers: {
           Authorization: `Bearer ${ACCESS_TOKEN}`,
@@ -54,7 +59,7 @@ export default function GitHubHeatmap() {
       });
 
       try {
-        const response = await client.request(query) as {
+        const response = await client.request(buildContributionQuery(USERNAME)) as {
           user?: {
             contributionsCollection?: {
               contributionCalendar?: {
