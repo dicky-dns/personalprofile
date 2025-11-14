@@ -1,7 +1,12 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 
-export default function Tooltip({ text, children }) {
+interface TooltipProps {
+  text: string;
+  children: ReactNode;
+}
+
+export default function Tooltip({ text, children }: TooltipProps) {
   const [isHovered, setIsHovered] = useState(false);
 
   return (

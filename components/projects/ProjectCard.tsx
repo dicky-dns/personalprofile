@@ -19,8 +19,6 @@ interface ProjectCardProps {
   description: string
   image: string
   tech: string[]
-  repo: string
-  projectLink: string
 }
 
 export default function ProjectCard({
